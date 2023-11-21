@@ -48,18 +48,10 @@
                 <button class="defaultbtn"><i class="fa-solid fa-person"></i><span>Személyes adatok</span></button>
             </div>
 
-            <div class="privacy">
-                <button class="defaultbtn"><i class="fa-solid fa-user-secret"></i><span>Láthatóság</span></button>
-            </div>
-
             <div class="security">
-                <button class="defaultbtn"><i class="fa-solid fa-lock"></i><span>Biztonság</span></button>
+                <button class="defaultbtn" onclick=""><i class="fa-solid fa-lock"></i><span>Biztonság</span></button>
             </div>
-
-            <div class="chat">
-                <button class="defaultbtn"><i class="fa-solid fa-comments"></i><span>Chat</span></button>
-            </div>
-
+            
             <button onclick="window.location='logout.inc.php'" class="defaultbtn"><i class="fa-solid fa-right-from-bracket"></i><span>Kijelentkezés</span></button>
             <button onclick="window.location='confirmation.inc.php'" id="delete_account"><i class="fa-solid fa-trash"></i><span>Fiók törlése</span></button>
         </div>
@@ -93,113 +85,50 @@
                         <span class="identifier">Kedvenc film kategóriád:</span>
                         <br>
                         <select name="chintime" class="inner">
-                            <option <?php if($_SESSION["dailyTime"]=="Nincs csincsillám") echo "selected"; ?>>Akció</option>
-                            <option <?php if($_SESSION["dailyTime"]=="Kevesebb, mint 1 óra") echo "selected"; ?>>Dokumentumfilm</option>
-                            <option <?php if($_SESSION["dailyTime"]=="1-2 óra") echo "selected"; ?>>1-2 óra</option>
-                            <option <?php if($_SESSION["dailyTime"]=="3-5 óra") echo "selected"; ?>>3-5 óra</option>
-                            <option <?php if($_SESSION["dailyTime"]=="Több, mint 5 óra") echo "selected"; ?>>Több, mint 5 óra</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Akció") echo "selected"; ?>>Akció</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Dokumentum") echo "selected"; ?>>Dokumentum</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Dráma") echo "selected"; ?>>Dráma</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Horror") echo "selected"; ?>>Horror</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Kaland") echo "selected"; ?>>Kaland</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Romantikus") echo "selected"; ?>>Romantikus</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Thriller") echo "selected"; ?>>Thriller</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Történelmi") echo "selected"; ?>>Történelmi</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Western") echo "selected"; ?>>Western</option>
                         </select>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="fav">
-                        <span class="identifier">Kedvenc csincsilla a boltunkból:</span>
+                        <span class="identifier">Általad preferált filmhossz:</span>
                         <div class=inner>
                             <select name="favchin">
-                                <option <?php if ($_SESSION["favChin"] == "Mindet imádom!") {echo "selected";} ?>>Mindet imádom!</option>
-                                <option <?php if ($_SESSION["favChin"] == "Puffancs") {echo "selected";} ?>>Puffancs</option>
-                                <option <?php if ($_SESSION["favChin"] == "Kókusz") {echo "selected";} ?>>Kókusz</option>
-                                <option <?php if ($_SESSION["favChin"] == "Hamu") {echo "selected";} ?>>Hamu</option>
-                                <option <?php if ($_SESSION["favChin"] == "Nutella") {echo "selected";} ?>>Nutella</option>
-                                <option <?php if ($_SESSION["favChin"] == "Mochi") {echo "selected";} ?>>Mochi</option>
+                                <option <?php if ($_SESSION["favChin"] == "< 1 óra") {echo "selected";} ?>>< 1 óra</option>
+                                <option <?php if ($_SESSION["favChin"] == "1 - 2 óra") {echo "selected";} ?>>1 - 2 óra</option>
+                                <option <?php if ($_SESSION["favChin"] == "2 - 3 óra") {echo "selected";} ?>>2 - 3 óra</option>
+                                <option <?php if ($_SESSION["favChin"] == "> 3 óra") {echo "selected";} ?>>> 3 óra</option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="owner">
-                        <span class="identifier">Van csincsillád?</span>
+                        <span class="identifier">Sorozat vagy film?</span>
                         <div class=inner>
                         <select name="owns_chinchilla">
-                            <option value="Nincs"<?php if ($_SESSION["owner"] === "Nincs") echo " selected"; ?>>Nincs</option>
-                            <option value="Van"<?php if ($_SESSION["owner"] === "Van") echo " selected"; ?>>Van</option>
+                            <option value="Sorozat"<?php if ($_SESSION["owner"] === "Sorozat") echo " selected"; ?>>Sorozat</option>
+                            <option value="Film"<?php if ($_SESSION["owner"] === "Film") echo " selected"; ?>>Film</option>
                         </select>
                         </div>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="longlove">
-                        <span class="identifier">Mióta imádod a csincsillákat?</span>
+                        <span class="identifier">Mi a kedvenc filmed?</span>
                         <br>
-                            <input class="inner" type="number" name="year_selector" id="year_selector" min="1900" max="2099" step="1" value="<?php echo $_SESSION["loveTime"];?>">
+                            <input class="inner" type="text" name="year_selector" id="year_selector" value="<?php echo $_SESSION["loveTime"];?>">
                     </div>
                 </div>
                 <button class="savebtn" type="submit" name="submit_personal"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
-            </form>
-        </div>
-        
-        <div class="privacyForm">
-            <form>
-                <div class="wrapper">
-                    <div class=left>
-                        <span class="identifier">Születési idő:</span>
-                        <select name="pubpri" class="inner">
-                            <option>Publikus</option>
-                            <option>Privát</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class="left">
-                        <span class="identifier">Bio:</span>
-                        <br>
-                        <select name="pubpri" class="inner">
-                            <option>Publikus</option>
-                            <option>Privát</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class=left>
-                        <span class="identifier">Napi csincsillával töltött idő:</span>
-                        <br>
-                        <select name="pubpri" class="inner">
-                            <option>Publikus</option>
-                            <option>Privát</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class="right">
-                        <span class="identifier">Kedvenc csincsilla a boltunkból:</span>
-                        <br>
-                        <select name="pubpri" class="inner">
-                            <option>Publikus</option>
-                            <option>Privát</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class="right2">
-                        <span class="identifier">Van csincsillád?</span>
-                        <br>
-                        <select name="pubpri" class="inner">
-                            <option>Publikus</option>
-                            <option>Privát</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class="right3">
-                        <span class="identifier">Mióta imádod a csincsillákat?</span>
-                        <br>
-                        <select name="pubpri" class="inner">
-                            <option>Publikus</option>
-                            <option>Privát</option>
-                        </select>
-                    </div>
-                </div>
-                <button class="savebtn"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
             </form>
         </div>
 
@@ -225,26 +154,8 @@
                 </form>
             </div>
         </div>
-
-        <div class="chatForm">
-            <div class="chat-container">
-                <div class="chat-header">
-                    <h2>Chat</h2>
-                </div>
-                <div class="chat-messages">
-                    <!-- meglévő üzenetek megjelenítése -->
-                </div>
-                <form id="chat-form">
-                    <div class="chat-input">
-                        <input type="text" name="message" placeholder="Írd ide az üzeneted...">
-                        <button class="chatbtn" type="submit" name="send"><i class="fa-solid fa-share"></i><span>Küldés</span></button>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/JS/userinter.js"></script>
-    <script src="./assets/JS/chat.js"></script>
 </body>
 </html>
