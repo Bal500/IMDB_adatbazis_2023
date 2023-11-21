@@ -48,8 +48,16 @@
                 <button class="defaultbtn"><i class="fa-solid fa-person"></i><span>Személyes adatok</span></button>
             </div>
 
+            <div class="privacy">
+                <button class="defaultbtn"><i class="fa-solid fa-user-secret"></i><span>Láthatóság</span></button>
+            </div>
+
             <div class="security">
                 <button class="defaultbtn"><i class="fa-solid fa-lock"></i><span>Biztonság</span></button>
+            </div>
+
+            <div class="chat">
+                <button class="defaultbtn"><i class="fa-solid fa-comments"></i><span>Chat</span></button>
             </div>
 
             <button onclick="window.location='logout.inc.php'" class="defaultbtn"><i class="fa-solid fa-right-from-bracket"></i><span>Kijelentkezés</span></button>
