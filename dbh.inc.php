@@ -9,3 +9,4 @@
     if (!$conn) {
         die("Csatlakozási hiba...");
     }
+?>
