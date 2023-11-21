@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./CSS/anim.css">
     <link rel="stylesheet" href="./CSS/iconbar.css">
     <link rel="stylesheet" href="./CSS/login.css">
+    <link rel="stylesheet" href="./CSS/table.css">
+    <link rel="stylesheet" href="./CSS/print.css">
     <link href="./assets/css/fontawesome.css" rel="stylesheet">
     <link href="./assets/css/solid.css" rel="stylesheet">
     <link rel="icon" href="./assets/kepek/imdb_icon.ico">
