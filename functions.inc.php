@@ -45,7 +45,6 @@
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("location: login.php?error=stmtfailed");
-            //header("location: login.php#reg");
             exit();
         }
 
