@@ -6,7 +6,7 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>Csincsilla Store</title>
+    <title>IMDb</title>
     <link rel="stylesheet" href="./CSS/main.css">
     <link rel="stylesheet" href="./CSS/szoveg.css">
     <link rel="stylesheet" href="./CSS/anim.css">
