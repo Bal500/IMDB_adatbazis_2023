@@ -1,0 +1,42 @@
+#printbtn {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: larger;
+    padding-top: 15px;
+    margin-left: 650px;
+    animation: fadeIn 1s;
+    transition: height .2s ease;
+}
+
+#printbtne {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: larger;
+    padding-top: 15px;
+    transform: translateY(-50%);
+    animation: fadeIn 1s;
+    transition: height .2s ease;
+}
+
+#printbtn:hover,
+#printbtne:hover {
+    cursor: pointer;
+}
+
+@media print {
+    #chin1 h2,
+    #printbtn,
+    #printbtne,
+    #backbtn,
+    #bemu,
+    #non,
+    .icon-bar {
+        display: none;;
+    }
+
+    #print, #print * {
+        display: block;
+    }
+}

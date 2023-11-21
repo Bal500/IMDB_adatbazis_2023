@@ -1,0 +1,11 @@
+body {
+    background-color: white;
+    color: #3A3B3C;
+    font-size: larger;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

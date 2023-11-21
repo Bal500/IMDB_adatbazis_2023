@@ -1,0 +1,136 @@
+#chin1 {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#chin1 h2 {
+    padding-top: 30px;
+    padding-bottom: 5px;
+    animation: fadeIn 1s;
+    transition: height .2s ease;
+}
+
+#chin1 p {
+    padding-bottom: 40px;
+    animation: fadeIn 1s;
+    transition: height .2s ease;
+}
+
+#chin1 .chinek .chin-con {
+    padding: 20px 0px;
+}
+
+#chin1 .chinek .chin-con .chin .nev {
+    padding: 0px 10px;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+#chin1 .chinek .chin-con .prod .nev {
+    padding: 0px 10px;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+#chin1 .chinek .chin-con .chin img {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 30%;
+    height: 50%;
+    border-radius: 80px;
+    border: #3A3B3C;
+    border-image-width: auto;
+}
+
+#chin1 .chinek .chin-con .prod img {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 30%;
+    height: 50%;
+    border-radius: 80px;
+    border: #3A3B3C;
+    border-image-width: auto;
+}
+
+#chin1 .chinek .chin-con .chin p {
+    text-align: center;
+    height: auto;
+}
+
+#chin1 .chinek .chin-con .prod p {
+    text-align: center;
+    height: auto;
+}
+
+#chin1 .chinek .chin-con .chin {
+    margin: 2% 15% 5% 15%;
+    position: relative;
+    background: transparent;
+    border: 2px solid #3A3B3C;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #3A3B3C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeIn 1s;
+    transition: height .2s ease;
+    width: 70%;
+    height: auto;
+}
+
+#chin1 .chinek .chin-con .prod {
+    margin: 2% 15% 5% 15%;
+    position: relative;
+    background: transparent;
+    border: 2px solid #3A3B3C;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #3A3B3C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeIn 1s;
+    transition: height .2s ease;
+    width: 70%;
+    height: auto;
+}
+
+#chin1 .chinek .chin-con a:visited {
+    color: #3A3B3C;
+    text-decoration: none;
+}
+
+#chin1 .chinek .chin-con a:link {
+    color: #3A3B3C;
+    text-decoration: none;
+}
+
+#chin1 .chinek .chin-con .chin .desc {
+    padding: 10px;
+    text-align: center;
+    height: auto;
+}
+
+#chin1 .chinek .chin-con .prod .desc {
+    padding: 10px;
+    text-align: center;
+    height: auto;
+}
+
+#chin1 .chinek .chin-con .chin .price {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+#chin1 .chinek .chin-con .prod .price {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+#chin1 .chinek .chin-con .prod:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,194 @@
+.wrapper {
+    position: fixed;
+    top: 33%;
+    left: 42.5%;
+    margin-top: -100px;
+    margin-left: -100px;
+    width: 450px;
+    height: 400px;
+    background: transparent;
+    border: 2px solid #3A3B3C;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeIn 1s;
+    transition: height .2s ease;
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper .login-form {
+    padding: 40px;
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .login-form {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper #register-method {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active #register-method {
+    padding: 40px;
+    transition: transform .18s ease;
+    transform: translateX(0px);
+}
+
+.wrapper h2 {
+    font-size: 2em;
+    color: #3A3B3C;
+    text-align: center;
+}
+
+.input {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    border-bottom: 2px solid #3A3B3C;
+    margin: 30px 0;
+    margin-left: 5px;
+    font-size: medium;
+}
+
+.input label {
+    position: absolute;
+    margin-top: 15px;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #3A3B3C;
+    font-weight: 500;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label {
+    top: -23px;
+    transition: all .5s ease-in-out;
+}
+
+.input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #3A3B3C;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input .icon {
+    position: absolute;
+    margin-top: -15px;
+    right: 8px;
+    font-size: 1.2em;
+    color: #3A3B3C;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #3A3B3C;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    text-align: center;
+}
+
+.aszf {
+    font-size: .9em;
+    color: #3A3B3C;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    text-align: center;
+}
+
+.remember-forgot label input {
+    accent-color: #3A3B3C;
+}
+
+.aszf label input {
+    accent-color: #3A3B3C;
+}
+
+.remember-forgot a {
+    color: #3A3B3C;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.aszf a {
+    color: #3A3B3C;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #3A3B3C;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+.login-regist {
+    font-size: .9em;
+    color: #3A3B3C;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-regist p a {
+    color: #3A3B3C;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-regist p a:hover {
+    text-decoration: underline;
+}
+
+form .error-msg {
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    background: crimson;
+    color: white;
+    border-radius: 20px;
+    animation: fadeIn 1s;
+}
+
+form .success-msg {
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    background: green;
+    color: white;
+    border-radius: 20px;
+    animation: fadeIn 1s;
+}
