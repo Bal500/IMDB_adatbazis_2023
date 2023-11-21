@@ -6,16 +6,15 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>Csincsilla Store</title>
+    <title>IMDb</title>
     <link rel="stylesheet" href="./CSS/main.css">
     <link rel="stylesheet" href="./CSS/szoveg.css">
     <link rel="stylesheet" href="./CSS/anim.css">
     <link rel="stylesheet" href="./CSS/iconbar.css">
     <link rel="stylesheet" href="./CSS/login.css">
-    <link rel="stylesheet" href="./CSS/toltokep.css">
     <link href="./assets/css/fontawesome.css" rel="stylesheet">
     <link href="./assets/css/solid.css" rel="stylesheet">
-    <link rel="icon" href="./assets/kepek/csinsegg.ico">
+    <link rel="icon" href="./assets/kepek/imdb_icon.ico">
 </head>
 <body>
     <div class="icon-bar">
