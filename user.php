@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="./CSS/szoveg.css">
     <link rel="stylesheet" href="./CSS/anim.css">
     <link rel="stylesheet" href="./CSS/iconbar.css">
-    <link rel="stylesheet" href="./CSS/login.css">
+    <link rel="stylesheet" href="./CSS/toltokep.css">
+    <link rel="stylesheet" href="./CSS/back.css">
+    <link rel="stylesheet" href="./CSS/sidebar.css">
+    <link rel="stylesheet" href="./CSS/userinterface.css">
     <link href="./assets/css/fontawesome.css" rel="stylesheet">
     <link href="./assets/css/solid.css" rel="stylesheet">
     <link rel="icon" href="./assets/kepek/imdb_icon.ico">
@@ -45,16 +48,8 @@
                 <button class="defaultbtn"><i class="fa-solid fa-person"></i><span>Személyes adatok</span></button>
             </div>
 
-            <div class="privacy">
-                <button class="defaultbtn"><i class="fa-solid fa-user-secret"></i><span>Láthatóság</span></button>
-            </div>
-
             <div class="security">
                 <button class="defaultbtn"><i class="fa-solid fa-lock"></i><span>Biztonság</span></button>
-            </div>
-
-            <div class="chat">
-                <button class="defaultbtn"><i class="fa-solid fa-comments"></i><span>Chat</span></button>
             </div>
 
             <button onclick="window.location='logout.inc.php'" class="defaultbtn"><i class="fa-solid fa-right-from-bracket"></i><span>Kijelentkezés</span></button>
@@ -87,11 +82,11 @@
                 </div>
                 <div class="wrapper">
                     <div class=daily>
-                        <span class="identifier">Napi csincsillával töltött idő:</span>
+                        <span class="identifier">Kedvenc film kategóriád:</span>
                         <br>
                         <select name="chintime" class="inner">
-                            <option <?php if($_SESSION["dailyTime"]=="Nincs csincsillám") echo "selected"; ?>>Nincs csincsillám</option>
-                            <option <?php if($_SESSION["dailyTime"]=="Kevesebb, mint 1 óra") echo "selected"; ?>>Kevesebb, mint 1 óra</option>
+                            <option <?php if($_SESSION["dailyTime"]=="Nincs csincsillám") echo "selected"; ?>>Akció</option>
+                            <option <?php if($_SESSION["dailyTime"]=="Kevesebb, mint 1 óra") echo "selected"; ?>>Dokumentumfilm</option>
                             <option <?php if($_SESSION["dailyTime"]=="1-2 óra") echo "selected"; ?>>1-2 óra</option>
                             <option <?php if($_SESSION["dailyTime"]=="3-5 óra") echo "selected"; ?>>3-5 óra</option>
                             <option <?php if($_SESSION["dailyTime"]=="Több, mint 5 óra") echo "selected"; ?>>Több, mint 5 óra</option>
