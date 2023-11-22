@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="icon-bar">
-        <a class="active" href="elerheto.php"><i class="fa fa-paw"></i></a>
+        <a class="active" href="filmek.php"><i class="fa-solid fa-film"></i></a>
         <a class="inactive" href="elerhetoseg.php"><i class="fa-solid fa-phone"></i></a>
         <?php
             if (isset($_SESSION["id"])) {
