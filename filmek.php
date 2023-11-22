@@ -32,8 +32,8 @@
     </div>
 
     <section id="chin1" class="chinwrap">
-        <h2>Elérhető Csincsillák</h2>
-        <p id="bemu">Válogass elérhető csincsilláink közül!</p>
+        <h2>Filmadatbázis</h2>
+        <p id="bemu">Böngéssz a filmek között, hogy ne legyen unalmas az este!</p>
 
         <button id="printbtne"><i class="fa-solid fa-print"></i></button>
 

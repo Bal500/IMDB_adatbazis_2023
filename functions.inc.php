@@ -158,7 +158,7 @@
             $_SESSION["dailyTime"] = $dataExists["dailyTime"];
             $_SESSION["loveTime"] = $dataExists["loveTime"];
 
-            header("location: elerheto.php");
+            header("location: filmek.php");
             exit();
         }
     }

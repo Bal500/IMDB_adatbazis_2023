@@ -33,7 +33,7 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2758.1869654795723!2d20.126299876151332!3d46.26638857109846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474487ef3a185823%3A0x8844a2ac76936764!2sCinema%20City!5e0!3m2!1shu!2shu!4v1700611142037!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="eler">
             <p><i class="fa-solid fa-square-phone"></i> 06 80 800 800</p>
-            <p><i class="fa-solid fa-at"></i> cinemacity.hu</p>
+            <p><i class="fa-solid fa-globe"></i> cinemacity.hu</p>
             <p><i class="fa-solid fa-location-dot"></i> Szeged, Kossuth Lajos sgrt. 119, 6724</p>
         </div>
     </div>
