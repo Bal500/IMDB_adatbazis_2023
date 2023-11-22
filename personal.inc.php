@@ -11,9 +11,9 @@
     if (isset($_POST["submit_personal"])) {
         $birthdate = $_POST["birthdate"];
         $bio = $_POST["bio"];
-        $dailyTime = $_POST["chintime"];
-        $favChin = $_POST["favchin"];
-        $ownsChinchilla = $_POST["owns_chinchilla"];
+        $movieType = $_POST["movieType"];
+        $idealLength = $_POST["idealLength"];
+        $ownsChinchilla = $_POST["film_or_series"];
         $userID = $_SESSION["id"];
         $new_name = $_POST["name"];
 
@@ -25,11 +25,11 @@
         $row = mysqli_fetch_array($result);
 
         if ($row[0] > 0) {
-            $stmt = $conn->prepare("UPDATE personal SET bio = ?, birthDate = ?, dailyTime = ?, favChin = ?, owner = ? WHERE userID = ?");
-            $stmt->bind_param("sssssi", $bio, $birthdate, $dailyTime, $favChin, $ownsChinchilla, $userID);
+            $stmt = $conn->prepare("UPDATE personal SET bio = ?, birthDate = ?, movieType = ?, idealLength = ?, FSprefer = ? WHERE userID = ?");
+            $stmt->bind_param("sssssi", $bio, $birthdate, $movieType, $idealLength, $ownsChinchilla, $userID);
         } else {
-            $stmt = $conn->prepare("INSERT INTO personal (userID, bio, birthDate, dailyTime, favChin, owner) VALUES (?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("isssss", $userID, $bio, $birthdate, $dailyTime, $favChin, $ownsChinchilla);
+            $stmt = $conn->prepare("INSERT INTO personal (userID, bio, birthDate, movieType, idealLength, FSprefer) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("isssss", $userID, $bio, $birthdate, $movieType, $idealLength, $ownsChinchilla);
         }
 
         $stmt->execute();

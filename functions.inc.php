@@ -152,10 +152,10 @@
             $dataExists = dataExists($conn, $_SESSION["id"]);
 
             $_SESSION["bio"] = $dataExists["bio"];
-            $_SESSION["favChin"] = $dataExists["favChin"];
-            $_SESSION["owner"] = $dataExists["owner"];
+            $_SESSION["idealLength"] = $dataExists["idealLength"];
+            $_SESSION["FSprefer"] = $dataExists["FSprefer"];
             $_SESSION["birthDate"] = $dataExists["birthDate"];
-            $_SESSION["dailyTime"] = $dataExists["dailyTime"];
+            $_SESSION["movieType"] = $dataExists["movieType"];
             $_SESSION["loveTime"] = $dataExists["loveTime"];
 
             header("location: filmek.php");

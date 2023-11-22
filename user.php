@@ -78,43 +78,43 @@
                     
                 </div>
                 <div class="wrapper">
-                    <div class=daily>
+                    <div class=fav_cat>
                         <span class="identifier">Kedvenc film kategóriám:</span>
                         <br>
-                        <select name="chintime" class="inner">
-                            <option <?php if($_SESSION["dailyTime"] == "Akció") echo "selected"; ?>>Akció</option>
-                            <option <?php if($_SESSION["dailyTime"] == "Dokumentum") echo "selected"; ?>>Dokumentum</option>
-                            <option <?php if($_SESSION["dailyTime"] == "Dráma") echo "selected"; ?>>Dráma</option>
-                            <option <?php if($_SESSION["dailyTime"] == "Horror") echo "selected"; ?>>Horror</option>
-                            <option <?php if($_SESSION["dailyTime"] == "Kaland") echo "selected"; ?>>Kaland</option>
-                            <option <?php if($_SESSION["dailyTime"] == "Romantikus") echo "selected"; ?>>Romantikus</option>
-                            <option <?php if($_SESSION["dailyTime"] == "Thriller") echo "selected"; ?>>Thriller</option>
-                            <option <?php if($_SESSION["dailyTime"] == "Történelmi") echo "selected"; ?>>Történelmi</option>
-                            <option <?php if($_SESSION["dailyTime"] == "Vígjáték") echo "selected"; ?>>Vígjáték</option>
-                            <option <?php if($_SESSION["dailyTime"] == "Western") echo "selected"; ?>>Western</option>
+                        <select name="movieType" class="inner">
+                            <option <?php if($_SESSION["movieType"] == "Akció") echo "selected"; ?>>Akció</option>
+                            <option <?php if($_SESSION["movieType"] == "Dokumentum") echo "selected"; ?>>Dokumentum</option>
+                            <option <?php if($_SESSION["movieType"] == "Dráma") echo "selected"; ?>>Dráma</option>
+                            <option <?php if($_SESSION["movieType"] == "Horror") echo "selected"; ?>>Horror</option>
+                            <option <?php if($_SESSION["movieType"] == "Kaland") echo "selected"; ?>>Kaland</option>
+                            <option <?php if($_SESSION["movieType"] == "Romantikus") echo "selected"; ?>>Romantikus</option>
+                            <option <?php if($_SESSION["movieType"] == "Thriller") echo "selected"; ?>>Thriller</option>
+                            <option <?php if($_SESSION["movieType"] == "Történelmi") echo "selected"; ?>>Történelmi</option>
+                            <option <?php if($_SESSION["movieType"] == "Vígjáték") echo "selected"; ?>>Vígjáték</option>
+                            <option <?php if($_SESSION["movieType"] == "Western") echo "selected"; ?>>Western</option>
                         </select>
                     </div>
                 </div>
                 <div class="wrapper">
-                    <div class="fav">
+                    <div class="ideal_length">
                         <span class="identifier">Az ideális film szerintem...</span>
                         <div class=inner>
-                            <select name="favchin">
-                                <option <?php if ($_SESSION["favChin"] == "< 1 óra") {echo "selected";} ?>>< 1 óra</option>
-                                <option <?php if ($_SESSION["favChin"] == "1 - 2 óra") {echo "selected";} ?>>1 - 2 óra</option>
-                                <option <?php if ($_SESSION["favChin"] == "2 - 3 óra") {echo "selected";} ?>>2 - 3 óra</option>
-                                <option <?php if ($_SESSION["favChin"] == "> 3 óra") {echo "selected";} ?>>> 3 óra</option>
+                            <select name="idealLength">
+                                <option <?php if ($_SESSION["idealLength"] == "< 1 óra") {echo "selected";} ?>>< 1 óra</option>
+                                <option <?php if ($_SESSION["idealLength"] == "1 - 2 óra") {echo "selected";} ?>>1 - 2 óra</option>
+                                <option <?php if ($_SESSION["idealLength"] == "2 - 3 óra") {echo "selected";} ?>>2 - 3 óra</option>
+                                <option <?php if ($_SESSION["idealLength"] == "> 3 óra") {echo "selected";} ?>>> 3 óra</option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="wrapper">
-                    <div class="longlove">
+                    <div class="preference">
                         <span class="identifier">Sorozat vagy film?</span>
                         <div class=inner>
-                        <select name="owns_chinchilla">
-                            <option value="Sorozat"<?php if ($_SESSION["owner"] === "Sorozat") echo " selected"; ?>>Sorozat</option>
-                            <option value="Film"<?php if ($_SESSION["owner"] === "Film") echo " selected"; ?>>Film</option>
+                        <select name="film_or_series">
+                            <option value="Sorozat"<?php if ($_SESSION["FSprefer"] === "Sorozat") echo " selected"; ?>>Sorozat</option>
+                            <option value="Film"<?php if ($_SESSION["FSprefer"] === "Film") echo " selected"; ?>>Film</option>
                         </select>
                         </div>
                     </div>

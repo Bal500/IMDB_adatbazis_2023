@@ -35,25 +35,22 @@
         <h2>Filmadatbázis</h2>
         <p id="bemu">Böngéssz a filmek között, hogy ne legyen unalmas az este!</p>
 
-        <button id="printbtne"><i class="fa-solid fa-print"></i></button>
-
         <div class="chinek" id="print">
             <div class="chin-con">
                 <div class="chin">
-                    <span class="nev">Puffancs</span>
+                    <span class="nev">A fegyvertelen katona</span>
                     <br>
-                    <img src="./assets/kepek/chinek/elsochin.jpg" alt="puffancs">
                     <p class="desc">
-                        Puffancs 2021. szeptember 10-én született. Ő egy gyönyörű, szürkés - barna színű, kíváncsi csincsilla.
+                        A második világháborús amerikai hadsereg egyik felcsere, Desmond T. Doss,
                         <br>
-                        Szereti az emberek társaságát, minden érdekli. Imád játszani, de legjobban a pocakja érdekli.
+                        aki az okinavai csata idején szolgált, nem hajlandó fegyvert ragadni,
                         <br>
-                        Jó természetű, gyerekekkel is jól érzi magát. Imád homokban fürdeni.
+                        ezáltal ő lesz az első ember az amerikai történelemben, aki leadott lövés nélkül kapja meg a Becsületrendet.
                     </p>
                     <br>
                     <p class="price">
                         <br>
-                        Ár: 20.000 Ft.-
+                        Hossz: 139 perc
                     </p>
                 </div>
 
