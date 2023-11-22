@@ -13,7 +13,7 @@
         $bio = $_POST["bio"];
         $movieType = $_POST["movieType"];
         $idealLength = $_POST["idealLength"];
-        $ownsChinchilla = $_POST["film_or_series"];
+        $prefers = $_POST["film_or_series"];
         $userID = $_SESSION["id"];
         $new_name = $_POST["name"];
 
@@ -26,10 +26,10 @@
 
         if ($row[0] > 0) {
             $stmt = $conn->prepare("UPDATE personal SET bio = ?, birthDate = ?, movieType = ?, idealLength = ?, FSprefer = ? WHERE userID = ?");
-            $stmt->bind_param("sssssi", $bio, $birthdate, $movieType, $idealLength, $ownsChinchilla, $userID);
+            $stmt->bind_param("sssssi", $bio, $birthdate, $movieType, $idealLength, $prefers, $userID);
         } else {
             $stmt = $conn->prepare("INSERT INTO personal (userID, bio, birthDate, movieType, idealLength, FSprefer) VALUES (?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("isssss", $userID, $bio, $birthdate, $movieType, $idealLength, $ownsChinchilla);
+            $stmt->bind_param("isssss", $userID, $bio, $birthdate, $movieType, $idealLength, $prefers);
         }
 
         $stmt->execute();

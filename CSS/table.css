@@ -1,39 +1,39 @@
-#chin1 {
+#filmsection {
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
 }
 
-#chin1 h2 {
+#filmsection h2 {
     padding-top: 30px;
     padding-bottom: 5px;
     animation: fadeIn 1s;
     transition: height .2s ease;
 }
 
-#chin1 p {
+#filmsection p {
     padding-bottom: 40px;
     animation: fadeIn 1s;
     transition: height .2s ease;
 }
 
-#chin1 .chinek .chin-con {
+#filmsection .films .film-con {
     padding: 20px 0px;
 }
 
-#chin1 .chinek .chin-con .chin .nev {
+#filmsection .films .film-con .film .nev {
     padding: 0px 10px;
     font-size: x-large;
     font-weight: 600;
 }
 
-#chin1 .chinek .chin-con .prod .nev {
+#filmsection .films .film-con .prod .nev {
     padding: 0px 10px;
     font-size: x-large;
     font-weight: 600;
 }
 
-#chin1 .chinek .chin-con .chin img {
+#filmsection .films .film-con .film img {
     padding-top: 20px;
     padding-bottom: 10px;
     width: 30%;
@@ -43,7 +43,7 @@
     border-image-width: auto;
 }
 
-#chin1 .chinek .chin-con .prod img {
+#filmsection .films .film-con .prod img {
     padding-top: 20px;
     padding-bottom: 10px;
     width: 30%;
@@ -53,17 +53,17 @@
     border-image-width: auto;
 }
 
-#chin1 .chinek .chin-con .chin p {
+#filmsection .films .film-con .film p {
     text-align: center;
     height: auto;
 }
 
-#chin1 .chinek .chin-con .prod p {
+#filmsection .films .film-con .prod p {
     text-align: center;
     height: auto;
 }
 
-#chin1 .chinek .chin-con .chin {
+#filmsection .films .film-con .film {
     margin: 2% 15% 5% 15%;
     position: relative;
     background: transparent;
@@ -81,7 +81,7 @@
     height: auto;
 }
 
-#chin1 .chinek .chin-con .prod {
+#filmsection .films .film-con .prod {
     margin: 2% 15% 5% 15%;
     position: relative;
     background: transparent;
@@ -99,38 +99,38 @@
     height: auto;
 }
 
-#chin1 .chinek .chin-con a:visited {
+#filmsection .films .film-con a:visited {
     color: #3A3B3C;
     text-decoration: none;
 }
 
-#chin1 .chinek .chin-con a:link {
+#filmsection .films .film-con a:link {
     color: #3A3B3C;
     text-decoration: none;
 }
 
-#chin1 .chinek .chin-con .chin .desc {
+#filmsection .films .film-con .film .desc {
     padding: 10px;
     text-align: center;
     height: auto;
 }
 
-#chin1 .chinek .chin-con .prod .desc {
+#filmsection .films .film-con .prod .desc {
     padding: 10px;
     text-align: center;
     height: auto;
 }
 
-#chin1 .chinek .chin-con .chin .price {
+#filmsection .films .film-con .film .price {
     margin-right: 10px;
     font-weight: 600;
 }
 
-#chin1 .chinek .chin-con .prod .price {
+#filmsection .films .film-con .prod .price {
     margin-right: 10px;
     font-weight: 600;
 }
 
-#chin1 .chinek .chin-con .prod:hover {
+#filmsection .films .film-con .prod:hover {
     cursor: pointer;
 }

@@ -31,13 +31,13 @@
         ?>
     </div>
 
-    <section id="chin1" class="chinwrap">
+    <section id="filmsection" class="filmwrap">
         <h2>Filmadatbázis</h2>
         <p id="bemu">Böngéssz a filmek között, hogy ne legyen unalmas az este!</p>
 
-        <div class="chinek" id="print">
-            <div class="chin-con">
-                <div class="chin">
+        <div class="films" id="print">
+            <div class="film-con">
+                <div class="film">
                     <span class="nev">A fegyvertelen katona</span>
                     <br>
                     <p class="desc">
@@ -54,77 +54,6 @@
                     </p>
                 </div>
 
-                <div class="chin">
-                    <span class="nev">Kókusz</span>
-                    <br>
-                    <img src="./assets/kepek/chinek/masodikchin.jpg" alt="kokusz">
-                    <p class="desc">
-                        Kókusz 2022. november 23-án született. A hófehér színű kis csincsilla kölyök igazi társasági lény.
-                        <br>
-                        Nagyon szeret más állatok közelében lenni, imád játszani. Kedvencei a plüssjátékok.
-                        <br>
-                        Emberektől sem fél, kézhez szokott kis kedvenc.
-                    </p>
-                    <br>
-                    <p class="price">
-                        <br>
-                        Ár: 40.000 Ft.-
-                    </p>
-                </div>
-
-                <div class="chin">
-                    <span class="nev">Hamu</span>
-                    <br>
-                    <img src="./assets/kepek/chinek/harmadikchin.jpg" alt="hamu">
-                    <p class="desc">
-                        Hamu 2022. január 10-én született fehér - szürke színű gombóc csincsilla.
-                        <br>
-                        Igazán barátságos természetű, hiszen ha csak teheti, valakinek az ölében, kezében helyezkedik el.
-                        <br>
-                        Ebből kifolyólag nagyon szeret lustálkodni és az evést sem veti meg, így igazi kis gombóc lett belőle.
-                    </p>
-                    <br>
-                    <p class="price">
-                        <br>
-                        Ár: 25.000 Ft.-
-                    </p>
-                </div>
-
-                <div class="chin">
-                    <span class="nev">Nutella</span>
-                    <br>
-                    <img src="./assets/kepek/chinek/negyedikchin.jpg" alt="nutella">
-                    <p class="desc">
-                        Nutella 2022. november 6-án született.
-                        <br>
-                        Ez a kis szürke kölyök jobban kedveli a magányos időtöltést, napja legnagyobb részében egyedül játszik, fürdik.
-                        <br>
-                        Kissé visszahúzódó, más állatoktól fél, bizalmatlan. Egyedüli kisállatnak javasolt.
-                    </p>
-                    <br>
-                    <p class="price">
-                        <br>
-                        Ár: 30.000 Ft.-
-                    </p>
-                </div>
-
-                <div class="chin">
-                    <span class="nev">Mochi</span>
-                    <br>
-                    <img src="./assets/kepek/chinek/otodikchin.jpg" alt="mochi">
-                    <p class="desc">
-                        Mochi 2022. augusztus 10-én született.
-                        <br>
-                        Kíváncsi természettel rendelkezik, egy kis finom falatért bármikor az emberek ölébe fekszik, de inkább magányos típus.
-                        <br>
-                        Nagyon szeret játszani, kifejezetten kedveli a futókereket.
-                    </p>
-                    <br>
-                    <p class="price">
-                        <br>
-                        Ár: 30.000 Ft.-
-                    </p>
-                </div>
             </div>
         </div>
     </section>
