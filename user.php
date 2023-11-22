@@ -22,9 +22,6 @@
 <body>
     <div class="icon-bar">
         <a class="intactive" href="elerheto.php"><i class="fa fa-paw"></i></a>
-        <a class="inactive" href="kiegeszito.php"><i class="fa-solid fa-baseball"></i></a>
-        <a class="inactive" href="tartasa.php"><i class="fa-solid fa-house"></i></a>
-        <a class="inactive" href="jellemzoi.php"><i class="fa-solid fa-venus-mars"></i></a>
         <a class="inactive" href="elerhetoseg.php"><i class="fa-solid fa-phone"></i></a>
         <?php
             if (isset($_SESSION["id"])) {
@@ -75,14 +72,14 @@
                 </div>
                 <div class="wrapper">
                     <div class="bio">
-                        <span class="identifier">Bio:</span>
+                        <span class="identifier">Legjobb filmes élményem:</span>
                             <textarea class="inner" name="bio" placeholder="Mesélj magadról, hogy jobban megismerhessünk..."><?php echo $_SESSION['bio'];?></textarea>
                     </div>
                     
                 </div>
                 <div class="wrapper">
                     <div class=daily>
-                        <span class="identifier">Kedvenc film kategóriád:</span>
+                        <span class="identifier">Kedvenc film kategóriám:</span>
                         <br>
                         <select name="chintime" class="inner">
                             <option <?php if($_SESSION["dailyTime"] == "Akció") echo "selected"; ?>>Akció</option>
@@ -93,13 +90,14 @@
                             <option <?php if($_SESSION["dailyTime"] == "Romantikus") echo "selected"; ?>>Romantikus</option>
                             <option <?php if($_SESSION["dailyTime"] == "Thriller") echo "selected"; ?>>Thriller</option>
                             <option <?php if($_SESSION["dailyTime"] == "Történelmi") echo "selected"; ?>>Történelmi</option>
+                            <option <?php if($_SESSION["dailyTime"] == "Vígjáték") echo "selected"; ?>>Vígjáték</option>
                             <option <?php if($_SESSION["dailyTime"] == "Western") echo "selected"; ?>>Western</option>
                         </select>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="fav">
-                        <span class="identifier">Általad preferált filmhossz:</span>
+                        <span class="identifier">Az ideális film szerintem...</span>
                         <div class=inner>
                             <select name="favchin">
                                 <option <?php if ($_SESSION["favChin"] == "< 1 óra") {echo "selected";} ?>>< 1 óra</option>
@@ -111,7 +109,7 @@
                     </div>
                 </div>
                 <div class="wrapper">
-                    <div class="owner">
+                    <div class="longlove">
                         <span class="identifier">Sorozat vagy film?</span>
                         <div class=inner>
                         <select name="owns_chinchilla">
@@ -119,13 +117,6 @@
                             <option value="Film"<?php if ($_SESSION["owner"] === "Film") echo " selected"; ?>>Film</option>
                         </select>
                         </div>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <div class="longlove">
-                        <span class="identifier">Mi a kedvenc filmed?</span>
-                        <br>
-                            <input class="inner" type="text" name="year_selector" id="year_selector" value="<?php echo $_SESSION["loveTime"];?>">
                     </div>
                 </div>
                 <button class="savebtn" type="submit" name="submit_personal"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>

@@ -14,7 +14,6 @@
         $dailyTime = $_POST["chintime"];
         $favChin = $_POST["favchin"];
         $ownsChinchilla = $_POST["owns_chinchilla"];
-        $loveTime = $_POST["year_selector"];
         $userID = $_SESSION["id"];
         $new_name = $_POST["name"];
 
@@ -26,11 +25,11 @@
         $row = mysqli_fetch_array($result);
 
         if ($row[0] > 0) {
-            $stmt = $conn->prepare("UPDATE personal SET bio = ?, birthDate = ?, dailyTime = ?, loveTime = ?, favChin = ?, owner = ? WHERE userID = ?");
-            $stmt->bind_param("ssssssi", $bio, $birthdate, $dailyTime, $loveTime, $favChin, $ownsChinchilla, $userID);
+            $stmt = $conn->prepare("UPDATE personal SET bio = ?, birthDate = ?, dailyTime = ?, favChin = ?, owner = ? WHERE userID = ?");
+            $stmt->bind_param("sssssi", $bio, $birthdate, $dailyTime, $favChin, $ownsChinchilla, $userID);
         } else {
-            $stmt = $conn->prepare("INSERT INTO personal (userID, bio, birthDate, dailyTime, loveTime, favChin, owner) VALUES (?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("issssss", $userID, $bio, $birthdate, $dailyTime, $loveTime, $favChin, $ownsChinchilla);
+            $stmt = $conn->prepare("INSERT INTO personal (userID, bio, birthDate, dailyTime, favChin, owner) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("isssss", $userID, $bio, $birthdate, $dailyTime, $favChin, $ownsChinchilla);
         }
 
         $stmt->execute();
