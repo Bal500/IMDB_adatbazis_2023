@@ -53,7 +53,6 @@
                         Hossz: 139 perc
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
