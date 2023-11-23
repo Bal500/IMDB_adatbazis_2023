@@ -32,31 +32,12 @@
     </div>
 
     <section id="filmsection" class="filmwrap">
-        <h2>Filmadatbázis</h2>
-        <p id="bemu">Böngéssz a filmek között, hogy ne legyen unalmas az este!</p>
+        <h2>Új film hozzáadása</h2>
+        <p id="bemu">Olyan filmet találtál, ami még nem szerepel adatbáziunkban? Add hozzá!</p>
 
-        <button id="addbtn" onclick="window.location.href='new_film.php'"><i class="fa-solid fa-plus"></i></button>
+        <button id="backbtn" onclick="window.location.href='filmek.php'"><i class="fa-solid fa-arrow-left"></i></button>
 
-        <div class="films" id="print">
-            <div class="film-con">
-                <div class="film">
-                    <span class="nev">A fegyvertelen katona</span>
-                    <br>
-                    <p class="desc">
-                        A második világháborús amerikai hadsereg egyik felcsere, Desmond T. Doss,
-                        <br>
-                        aki az okinavai csata idején szolgált, nem hajlandó fegyvert ragadni,
-                        <br>
-                        ezáltal ő lesz az első ember az amerikai történelemben, aki leadott lövés nélkül kapja meg a Becsületrendet.
-                    </p>
-                    <br>
-                    <p class="filmlength">
-                        <br>
-                        Hossz: 139 perc
-                    </p>
-                </div>
-            </div>
-        </div>
+
     </section>
 </body>
 </html>

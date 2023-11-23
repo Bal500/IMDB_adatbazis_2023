@@ -1,15 +1,16 @@
+#addbtn,
 #backbtn {
     background: transparent;
     outline: none;
     border: none;
     font-size: larger;
     padding-top: 15px;
-    margin-right: 650px;
+    transform: translateY(-50%);
     animation: fadeIn 1s;
     transition: height .2s ease;
-    color: #3A3B3C;
 }
 
-#backbtn:hover {
+#backbtn:hover,
+#addbtn:hover {
     cursor: pointer;
 }
