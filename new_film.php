@@ -62,7 +62,7 @@
                     <textarea name="film_desc" placeholder="Film leírása..." cols="50" rows="10" required></textarea>
                 </div>
 
-                <button class="film_savebtn" type="submit" name="submit_personal"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
+                <button class="film_savebtn" type="submit" name="submit_personal" onclick="window.location.href='filmek.php'"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
             </div>
 
             <div id="seriesFields" style="display: none;">

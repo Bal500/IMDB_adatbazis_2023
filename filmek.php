@@ -52,7 +52,9 @@
                     <br>
                     <p class="filmlength">
                         <br>
-                        Hossz: 139 perc
+                        Hossz:
+                        <br>
+                        139 p
                     </p>
                 </div>
             </div>

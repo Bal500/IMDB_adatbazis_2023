@@ -73,7 +73,7 @@
                 <div class="wrapper">
                     <div class="bio">
                         <span class="identifier">Legjobb filmes élményem:</span>
-                            <textarea class="inner" name="bio" placeholder="Mesélj magadról, hogy jobban megismerhessünk..."><?php echo $_SESSION['bio'];?></textarea>
+                            <textarea class="inner" name="bio" placeholder="Meséld el legjobb filmes élményed!"><?php echo $_SESSION['bio'];?></textarea>
                     </div>
                     
                 </div>
