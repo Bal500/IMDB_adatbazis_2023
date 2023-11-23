@@ -17,7 +17,7 @@
         $userID = $_SESSION["id"];
         $new_name = $_POST["name"];
 
-        $nameUp = "UPDATE user_form SET name='$new_name' WHERE id='$userID'";
+        $nameUp = "UPDATE users SET name='$new_name' WHERE id='$userID'";
         $conn->query($nameUp);
 
         $checker = "SELECT COUNT(*) FROM personal WHERE userID = '$userID'";

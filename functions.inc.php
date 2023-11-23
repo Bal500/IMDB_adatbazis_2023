@@ -41,7 +41,7 @@
     }
 
     function emailExists($conn, $email) {
-        $sql = "SELECT * FROM user_form WHERE email = ?;";
+        $sql = "SELECT * FROM users WHERE email = ?;";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("location: login.php?error=stmtfailed");
@@ -97,7 +97,7 @@
     }
 
     function createUser($conn, $name, $email, $password) {
-        $sql = "INSERT INTO user_form (name, email, password) VALUES (?, ?, ?);";
+        $sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?);";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("location: login.php?error=stmtfailed");

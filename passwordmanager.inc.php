@@ -8,7 +8,7 @@
         $newPass2 = $_POST["newpass2"];
         $userID = $_SESSION["id"];
 
-        $stmt = $conn->prepare("SELECT password FROM user_form WHERE id = ?");
+        $stmt = $conn->prepare("SELECT password FROM users WHERE id = ?");
         $stmt->bind_param("i", $userID);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -18,7 +18,7 @@
             if ($newPass === $newPass2) {
                 $newPassHashed = password_hash($newPass, PASSWORD_DEFAULT);
 
-                $stmt = $conn->prepare("UPDATE user_form SET password = ? WHERE id = ?");
+                $stmt = $conn->prepare("UPDATE users SET password = ? WHERE id = ?");
                 $stmt->bind_param("si", $newPassHashed, $userID);
                 $stmt->execute();
 

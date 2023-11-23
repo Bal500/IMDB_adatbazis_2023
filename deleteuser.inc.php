@@ -4,7 +4,7 @@
     $id_del = $_SESSION["id"];
 
     $query2 = "DELETE FROM personal WHERE userID=?";
-    $query = "DELETE FROM user_form WHERE id=?";
+    $query = "DELETE FROM users WHERE id=?";
     
     $stmt2 = mysqli_prepare($conn, $query2);
     mysqli_stmt_bind_param($stmt2, "i", $id_del);
