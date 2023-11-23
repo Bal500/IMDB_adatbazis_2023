@@ -158,31 +158,6 @@ textarea {
     resize: none;
 }
 
-.savebtn {
-    display: flex;
-    width: 100px;
-    height: 50px;
-    background: #3A3B3C;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: white;
-    font-weight: 500;
-    margin-top: 7px;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 275px;
-    top: 500px
-}
-
-.savebtn span,
-.savebtn-new span {
-    padding-left: 10px;
-}
-
 .chat-container {
     transform: translateY(+15%);
     background-color: #F2F2F2;
@@ -302,25 +277,6 @@ textarea {
 
 .securityForm {
     margin-top: 50px;
-}
-
-.savebtn-new {
-    display: flex;
-    width: 100px;
-    height: 50px;
-    background: #3A3B3C;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: white;
-    font-weight: 500;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 300px;
-    top: 400px;
 }
 
 select {

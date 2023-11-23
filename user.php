@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./CSS/anim.css">
     <link rel="stylesheet" href="./CSS/iconbar.css">
     <link rel="stylesheet" href="./CSS/toltokep.css">
-    <link rel="stylesheet" href="./CSS/back.css">
+    <link rel="stylesheet" href="./CSS/buttons.css">
     <link rel="stylesheet" href="./CSS/sidebar.css">
     <link rel="stylesheet" href="./CSS/userinterface.css">
     <link href="./assets/css/fontawesome.css" rel="stylesheet">
