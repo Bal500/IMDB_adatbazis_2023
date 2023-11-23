@@ -35,7 +35,13 @@
         <h2>Filmadatbázis</h2>
         <p id="bemu">Böngéssz a filmek között, hogy ne legyen unalmas az este!</p>
 
-        <button id="addbtn" onclick="window.location.href='new_film.php'"><i class="fa-solid fa-plus"></i></button>
+        <?php
+            if (isset($_SESSION["id"])) {
+                echo '<button id="addbtn" onclick="window.location.href=\'new_film.php\'"><i class="fa-solid fa-plus"></i></button>';
+            } else {
+                echo "<span>Új filmet adnál adatbázisunkhoz? <a href='login.php'>Jelentkezz be!</a></span>";
+            }
+        ?>
 
         <?php
             require_once 'dbh.inc.php';
