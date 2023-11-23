@@ -48,7 +48,7 @@
                         ezáltal ő lesz az első ember az amerikai történelemben, aki leadott lövés nélkül kapja meg a Becsületrendet.
                     </p>
                     <br>
-                    <p class="price">
+                    <p class="filmlength">
                         <br>
                         Hossz: 139 perc
                     </p>
@@ -56,7 +56,6 @@
             </div>
         </div>
     </section>
-    <script src="./assets/JS/printe.js"></script>
     <script src="./assets/JS/userinter.js"></script>
 </body>
 </html>

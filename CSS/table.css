@@ -121,12 +121,12 @@
     height: auto;
 }
 
-#filmsection .films .film-con .film .price {
+#filmsection .films .film-con .film .filmlength {
     margin-right: 10px;
     font-weight: 600;
 }
 
-#filmsection .films .film-con .prod .price {
+#filmsection .films .film-con .prod .filmlength {
     margin-right: 10px;
     font-weight: 600;
 }
