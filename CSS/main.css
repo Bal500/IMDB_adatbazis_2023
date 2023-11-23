@@ -2,6 +2,18 @@ body {
     background-color: white;
     color: #3A3B3C;
     font-size: larger;
+    animation: fadeIn 1s;
+    transition: height .2s ease;
+}
+
+.closed {
+    color: #3A3B3C;
+    animation: fadeIn 1s;
+    transition: height .2s ease;
+}
+
+a:visited {
+    color: #3A3B3C;
 }
 
 * {

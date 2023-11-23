@@ -20,8 +20,8 @@
 </head>
 <body>
     <div class="icon-bar">
-        <a class="active" href="filmek.php"><i class="fa-solid fa-film"></i></a>
         <a class="inactive" href="elerhetoseg.php"><i class="fa-solid fa-phone"></i></a>
+        <a class="active" href="filmek.php"><i class="fa-solid fa-film"></i></a>
         <?php
             if (isset($_SESSION["id"])) {
                 echo "<a class='inactive' href='user.php'><i class='fa-solid fa-user'></i></a>";
@@ -42,7 +42,7 @@
                 echo '<button id="addbtn" onclick="window.location.href=\'new_film.php\'"><i class="fa-solid fa-plus"></i></button>';
                 echo '<br>';
             } else {
-                echo "<span>Új filmet adnál adatbázisunkhoz? <a href='login.php'>Jelentkezz be!</a></span>";
+                echo "<span class='closed'>Új filmet adnál adatbázisunkhoz? <a href='login.php'>Jelentkezz be!</a></span>";
                 echo '<br>';
             }
 

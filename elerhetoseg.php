@@ -18,8 +18,8 @@
 </head>
 <body>
     <div class="icon-bar">
-        <a class="intactive" href="filmek.php"><i class="fa-solid fa-film"></i></a>
         <a class="active" href="elerhetoseg.php"><i class="fa-solid fa-phone"></i></a>
+        <a class="intactive" href="filmek.php"><i class="fa-solid fa-film"></i></a>
         <?php
             if (isset($_SESSION["id"])) {
                 echo "<a class='inactive' href='user.php'><i class='fa-solid fa-user'></i></a>";
