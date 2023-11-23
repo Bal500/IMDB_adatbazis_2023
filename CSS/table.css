@@ -109,24 +109,18 @@
     text-decoration: none;
 }
 
-#filmsection .films .film-con .film .desc {
-    padding: 10px;
-    text-align: center;
-    height: auto;
-}
-
+#filmsection .films .film-con .film .desc,
 #filmsection .films .film-con .prod .desc {
     padding: 10px;
+    margin: 40px 70px;
     text-align: center;
     height: auto;
+    max-width: 40%;
 }
 
-#filmsection .films .film-con .film .filmlength {
-    margin-right: 10px;
-    font-weight: 600;
-}
-
+#filmsection .films .film-con .film .filmlength,
 #filmsection .films .film-con .prod .filmlength {
+    margin-top: 40px;
     margin-right: 10px;
     font-weight: 600;
 }

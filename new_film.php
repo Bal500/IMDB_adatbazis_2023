@@ -45,49 +45,69 @@
                     <label for="typeof_series">Sorozat</label>
             </div>
 
-            <div id="filmFields" style="display: none;">
-                <div class="input">
-                    <input type="text" name="film_title" placeholder="Film címe..." required>
-                </div>
-    
-                <div class="input">
-                    <input type="text" name="film_director" placeholder="Rendező..." required>
-                </div>
-    
-                <div class="input">
-                    <input type="text" name="actors" placeholder="Színészek... (vesszővel elválasztva)" required>
-                </div>
-    
-                <div class="msgbox">
-                    <textarea name="film_desc" placeholder="Film leírása..." cols="50" rows="10" required></textarea>
-                </div>
+            <form method="post" action="new_film.inc.php">
+                <div id="filmFields" style="display: none;">
+                    <div class="input">
+                        <input type="text" name="film_title" placeholder="Film címe..." required>
+                    </div>
+        
+                    <div class="input">
+                        <input type="text" name="film_director" placeholder="Rendező..." required>
+                    </div>
 
-                <button class="film_savebtn" type="submit" name="submit_personal" onclick="window.location.href='filmek.php'"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
-            </div>
+                    <div class="input">
+                        <input type="number" name="film_length" placeholder="Film hossza... (percben)" required>
+                    </div>
 
-            <div id="seriesFields" style="display: none;">
-                <div class="input">
-                    <input type="text" name="series_title" placeholder="Sorozat címe..." required>
-                </div>
-    
-                <div class="input">
-                    <input type="number" name="series_season" placeholder="Évadok száma..." required>
-                </div>
-    
-                <div class="input">
-                    <input type="number" name="series_parts" placeholder="Részek száma..." required>
-                </div>
+                    <div class="input">
+                        <input type="number" name="film_publish" placeholder="Megjelenés éve..." required min="1900" max="2023">
+                    </div>
+        
+                    <div class="input">
+                        <input type="text" name="film_type" placeholder="Műfaj..." required>
+                    </div>
 
-                <div class="input">
-                    <input type="text" name="actors" placeholder="Színészek... (vesszővel elválasztva)" required>
-                </div>
-    
-                <div class="msgbox">
-                    <textarea name="series_desc" placeholder="Sorozat leírása..." cols="50" rows="10" required></textarea>
-                </div>
+                    <div class="input">
+                        <input type="text" name="actors" placeholder="Színészek... (vesszővel elválasztva)" required>
+                    </div>
+        
+                    <div class="msgbox">
+                        <textarea name="film_desc" placeholder="Film leírása..." cols="50" rows="10" required></textarea>
+                    </div>
 
-                <button class="film_savebtn" type="submit" name="submit_personal"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
-            </div>
+                    <button class="film_savebtn" type="submit" name="submit_film"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
+                </div>
+            </form>
+
+            <form method="post" action="new_series.inc.php">
+                <div id="seriesFields" style="display: none;">
+                    <div class="input">
+                        <input type="text" name="series_title" placeholder="Sorozat címe..." required>
+                    </div>
+        
+                    <div class="input">
+                        <input type="number" name="series_season" placeholder="Évadok száma..." required>
+                    </div>
+        
+                    <div class="input">
+                        <input type="number" name="series_parts" placeholder="Részek száma..." required>
+                    </div>
+
+                    <div class="input">
+                        <input type="text" name="series_type" placeholder="Műfaj..." required>
+                    </div>
+
+                    <div class="input">
+                        <input type="text" name="actors" placeholder="Színészek... (vesszővel elválasztva)" required>
+                    </div>
+        
+                    <div class="msgbox">
+                        <textarea name="series_desc" placeholder="Sorozat leírása..." cols="50" rows="10" required></textarea>
+                    </div>
+
+                    <button class="film_savebtn" type="submit" name="submit_series"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
+                </div>
+            </form>
         </fieldset>
     </section>
     <script src="./assets/JS/filmAdding.js"></script>

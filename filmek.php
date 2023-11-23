@@ -37,28 +37,64 @@
 
         <button id="addbtn" onclick="window.location.href='new_film.php'"><i class="fa-solid fa-plus"></i></button>
 
-        <div class="films" id="print">
-            <div class="film-con">
-                <div class="film">
-                    <span class="nev">A fegyvertelen katona</span>
-                    <br>
-                    <p class="desc">
-                        A második világháborús amerikai hadsereg egyik felcsere, Desmond T. Doss,
-                        <br>
-                        aki az okinavai csata idején szolgált, nem hajlandó fegyvert ragadni,
-                        <br>
-                        ezáltal ő lesz az első ember az amerikai történelemben, aki leadott lövés nélkül kapja meg a Becsületrendet.
-                    </p>
-                    <br>
-                    <p class="filmlength">
-                        <br>
-                        Hossz:
-                        <br>
-                        139 p
-                    </p>
-                </div>
-            </div>
-        </div>
+        <?php
+            require_once 'dbh.inc.php';
+
+            $getFilm = "SELECT cim, leiras, jatekido FROM filmek";
+            $getSeries = "SELECT cim, leiras, evadok FROM sorozatok";
+            $result_film = $conn->query($getFilm);
+            $result_series = $conn->query($getSeries);
+
+            if ($result_film->num_rows > 0) {
+                echo '<br>';
+                echo '<br>';
+                echo '<h3>Filmek</h3>';
+                while($row = $result_film->fetch_assoc()) {
+                    echo '
+                    <div class="films" id="print">
+                        <div class="film-con">
+                            <div class="film">
+                                <span class="nev">' . $row["cim"] . '</span>
+                                <br>
+                                <p class="desc">' . $row["leiras"] . '</p>
+                                <br>
+                                <p class="filmlength">
+                                Hossz: 
+                                <br>' . $row["jatekido"] . ' p
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    ';
+                }
+            }
+
+            echo '<br>';
+
+            if ($result_series->num_rows > 0) {
+                echo '<br>';
+                echo '<h3>Sorozatok</h3>';
+                while($row = $result_series->fetch_assoc()) {
+                    echo '
+                    <div class="films" id="print">
+                        <div class="film-con">
+                            <div class="film">
+                                <span class="nev">' . $row["cim"] . '</span>
+                                <br>
+                                <p class="desc">' . $row["leiras"] . '</p>
+                                <br>
+                                <p class="filmlength">
+                                Évadok száma: 
+                                <br>' . $row["evadok"] . ' évad
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    ';
+                }
+            }
+            $conn->close();
+        ?>
     </section>
 </body>
 </html>
