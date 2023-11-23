@@ -36,6 +36,8 @@
         <p id="bemu">Böngéssz a filmek között, hogy ne legyen unalmas az este!</p>
 
         <?php
+            require_once 'dbh.inc.php';
+
             if (isset($_SESSION["id"])) {
                 echo '<button id="addbtn" onclick="window.location.href=\'new_film.php\'"><i class="fa-solid fa-plus"></i></button>';
                 echo '<br>';
@@ -43,10 +45,6 @@
                 echo "<span>Új filmet adnál adatbázisunkhoz? <a href='login.php'>Jelentkezz be!</a></span>";
                 echo '<br>';
             }
-        ?>
-
-        <?php
-            require_once 'dbh.inc.php';
 
             $getFilm = "SELECT cim, leiras, jatekido FROM filmek";
             $getSeries = "SELECT cim, leiras, evadok FROM sorozatok";
