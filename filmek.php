@@ -49,6 +49,7 @@
         <div class="films" id="print">
             <div class="film-con">
             <?php
+                require_once 'dbh.inc.php';
                 $getFilm = "SELECT cim, leiras, jatekido FROM filmek";
                 $getSeries = "SELECT cim, leiras, evadok FROM sorozatok";
                 $result_film = $conn->query($getFilm);
