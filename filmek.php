@@ -45,20 +45,21 @@
                 echo "<span class='closed'>Új filmet adnál adatbázisunkhoz? <a href='login.php'>Jelentkezz be!</a></span>";
                 echo '<br>';
             }
+        ?>
+        <div class="films" id="print">
+            <div class="film-con">
+            <?php
+                $getFilm = "SELECT cim, leiras, jatekido FROM filmek";
+                $getSeries = "SELECT cim, leiras, evadok FROM sorozatok";
+                $result_film = $conn->query($getFilm);
+                $result_series = $conn->query($getSeries);
 
-            $getFilm = "SELECT cim, leiras, jatekido FROM filmek";
-            $getSeries = "SELECT cim, leiras, evadok FROM sorozatok";
-            $result_film = $conn->query($getFilm);
-            $result_series = $conn->query($getSeries);
-
-            if ($result_film->num_rows > 0) {
-                echo '<br>';
-                echo '<br>';
-                echo '<h3>Filmek</h3>';
-                while($row = $result_film->fetch_assoc()) {
-                    echo '
-                    <div class="films" id="print">
-                        <div class="film-con">
+                if ($result_film->num_rows > 0) {
+                    echo '<br>';
+                    echo '<br>';
+                    echo '<h3>Filmek</h3>';
+                    while($row = $result_film->fetch_assoc()) {
+                        echo '
                             <div class="film">
                                 <span class="nev">' . $row["cim"] . '</span>
                                 <br>
@@ -69,21 +70,17 @@
                                 <br>' . $row["jatekido"] . ' p
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                    ';
+                        ';
+                    }
                 }
-            }
 
-            echo '<br>';
-
-            if ($result_series->num_rows > 0) {
                 echo '<br>';
-                echo '<h3>Sorozatok</h3>';
-                while($row = $result_series->fetch_assoc()) {
-                    echo '
-                    <div class="films" id="print">
-                        <div class="film-con">
+
+                if ($result_series->num_rows > 0) {
+                    echo '<br>';
+                    echo '<h3>Sorozatok</h3>';
+                    while($row = $result_series->fetch_assoc()) {
+                        echo '
                             <div class="film">
                                 <span class="nev">' . $row["cim"] . '</span>
                                 <br>
@@ -94,13 +91,14 @@
                                 <br>' . $row["evadok"] . ' évad
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                    ';
+                        ';
+                    }
                 }
-            }
-            $conn->close();
-        ?>
+                $conn->close();
+            ?>
+            </div>
+        </div>
+        
     </section>
 </body>
 </html>
