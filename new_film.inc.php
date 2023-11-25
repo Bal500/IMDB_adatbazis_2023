@@ -12,13 +12,14 @@
         $cim = $_POST['film_title'];
         $rendezo = $_POST['film_director'];
         $leiras = $_POST['film_desc'];
+        $szineszek = $_POST['actors'];
         $jatekido = $_POST['film_length'];
         $mufaj = $_POST['film_type'];
         $megjelenes_eve = $_POST['film_publish'];
         $ertekeles = 0;
     
-        $insert_film = "INSERT INTO filmek (cim, rendezo, leiras, jatekido, mufaj, megjelenes_eve, ertekeles)
-                        VALUES ('$cim', '$rendezo', '$leiras', '$jatekido', '$mufaj', '$megjelenes_eve', '$ertekeles')";
+        $insert_film = "INSERT INTO filmek (cim, rendezo, leiras, szineszek, jatekido, mufaj, megjelenes_eve, ertekeles)
+                        VALUES ('$cim', '$rendezo', '$leiras', '$szineszek', '$jatekido', '$mufaj', '$megjelenes_eve', '$ertekeles')";
 
         $conn->query($insert_film);
 

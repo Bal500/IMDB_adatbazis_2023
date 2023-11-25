@@ -21,67 +21,19 @@
     padding: 20px 0px;
 }
 
-#filmsection .films .film-con .film .nev {
+#filmsection .films .film-con .film .details .nev {
     padding: 0px 10px;
     font-size: x-large;
     font-weight: 600;
 }
 
-#filmsection .films .film-con .prod .nev {
-    padding: 0px 10px;
-    font-size: x-large;
-    font-weight: 600;
-}
-
-#filmsection .films .film-con .film img {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    width: 30%;
-    height: 50%;
-    border-radius: 80px;
-    border: #3A3B3C;
-    border-image-width: auto;
-}
-
-#filmsection .films .film-con .prod img {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    width: 30%;
-    height: 50%;
-    border-radius: 80px;
-    border: #3A3B3C;
-    border-image-width: auto;
-}
-
-#filmsection .films .film-con .film p {
+#filmsection .films .film-con .film .details p {
     text-align: center;
     height: auto;
 }
 
-#filmsection .films .film-con .prod p {
-    text-align: center;
-    height: auto;
-}
-
-#filmsection .films .film-con .film {
-    margin: 2% 15% 5% 15%;
-    position: relative;
-    background: transparent;
-    border: 2px solid #3A3B3C;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px #3A3B3C;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    animation: fadeIn 1s;
-    transition: height .2s ease;
-    width: 70%;
-    height: auto;
-}
-
-#filmsection .films .film-con .prod {
+#filmsection .films .film-con .film .details {
+    cursor: pointer;
     margin: 2% 15% 5% 15%;
     position: relative;
     background: transparent;
@@ -109,8 +61,7 @@
     text-decoration: none;
 }
 
-#filmsection .films .film-con .film .desc,
-#filmsection .films .film-con .prod .desc {
+#filmsection .films .film-con .film .details .desc {
     padding: 10px;
     margin: 40px 70px;
     text-align: center;
@@ -118,13 +69,8 @@
     max-width: 40%;
 }
 
-#filmsection .films .film-con .film .filmlength,
-#filmsection .films .film-con .prod .filmlength {
+#filmsection .films .film-con .film .details .filmlength {
     margin-top: 40px;
     margin-right: 10px;
     font-weight: 600;
-}
-
-#filmsection .films .film-con .prod:hover {
-    cursor: pointer;
 }

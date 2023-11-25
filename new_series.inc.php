@@ -13,11 +13,12 @@
         $evadok = $_POST['series_season'];
         $reszek = $_POST['series_parts'];
         $leiras = $_POST['series_desc'];
+        $szineszek = $_POST['actors'];
         $mufaj = $_POST['series_type'];
         $ertekeles = 0;
     
-        $insert_series = "INSERT INTO sorozatok (cim, leiras, mufaj, evadok, reszek, ertekeles)
-                        VALUES ('$cim', '$leiras', '$mufaj', '$evadok', '$reszek', '$ertekeles')";
+        $insert_series = "INSERT INTO sorozatok (cim, leiras, szineszek, mufaj, evadok, reszek, ertekeles)
+                        VALUES ('$cim', '$leiras', '$szineszek', '$mufaj', '$evadok', '$reszek', '$ertekeles')";
 
         $conn->query($insert_series);
 

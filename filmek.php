@@ -50,8 +50,8 @@
             <div class="film-con">
             <?php
                 require_once 'dbh.inc.php';
-                $getFilm = "SELECT cim, leiras, jatekido FROM filmek";
-                $getSeries = "SELECT cim, leiras, evadok FROM sorozatok";
+                $getFilm = "SELECT id, rendezo, cim, leiras, jatekido FROM filmek";
+                $getSeries = "SELECT id, cim, reszek, leiras, evadok FROM sorozatok";
                 $result_film = $conn->query($getFilm);
                 $result_series = $conn->query($getSeries);
 
@@ -60,18 +60,20 @@
                     echo '<br>';
                     echo '<h3>Filmek</h3>';
                     while($row = $result_film->fetch_assoc()) {
-                        echo '
-                            <div class="film">
-                                <span class="nev">' . $row["cim"] . '</span>
-                                <br>
-                                <p class="desc">' . $row["leiras"] . '</p>
-                                <br>
-                                <p class="filmlength">
-                                Hossz: 
-                                <br>' . $row["jatekido"] . ' p
-                                </p>
+                        echo "
+                            <div class='film'>
+                                <a href='detailform.inc.php?id=" . $row["id"] . "' class='details'>
+                                    <span class='nev'>" . $row["rendezo"] . ": <br>" . $row["cim"] . "</span>
+                                    <br>
+                                    <p class='desc'>" . $row["leiras"] . "</p>
+                                    <br>
+                                    <p class='filmlength'>
+                                    Hossz: 
+                                    <br>" . $row["jatekido"] . " p
+                                    </p>
+                                </a>
                             </div>
-                        ';
+                        ";
                     }
                 }
 
@@ -81,25 +83,26 @@
                     echo '<br>';
                     echo '<h3>Sorozatok</h3>';
                     while($row = $result_series->fetch_assoc()) {
-                        echo '
-                            <div class="film">
-                                <span class="nev">' . $row["cim"] . '</span>
-                                <br>
-                                <p class="desc">' . $row["leiras"] . '</p>
-                                <br>
-                                <p class="filmlength">
-                                Évadok száma: 
-                                <br>' . $row["evadok"] . ' évad
-                                </p>
+                        echo "
+                            <div class='film'>
+                                <a href='detailform.inc.php?id=" . $row["id"] . "' class='details'>
+                                    <span class='nev'>" . $row["cim"] . "<br> (" . $row["reszek"] . ") rész</span>
+                                    <br>
+                                    <p class='desc'>" . $row["leiras"] . "</p>
+                                    <br>
+                                    <p class='filmlength'>
+                                    Évadok száma: 
+                                    <br>" . $row["evadok"] . " évad
+                                    </p>
+                                </a>
                             </div>
-                        ';
+                        ";
                     }
                 }
                 $conn->close();
             ?>
             </div>
         </div>
-        
     </section>
 </body>
 </html>
