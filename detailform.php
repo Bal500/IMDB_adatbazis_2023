@@ -59,7 +59,11 @@
                     echo '&nbsp;&nbsp;<i class="fa-solid fa-thumbs-up" onclick="window.location=\'positive_film.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $film["ertekeles_pozitiv"] . ') ' . '<i class="fa-solid fa-thumbs-down" onclick="window.location=\'negative_film.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $film["ertekeles_negativ"] . ')';
                     echo '<br>';
                     echo '<br>';
-                    echo '<i class="fa-solid fa-pen" onclick="window.location=\'edit_film.inc.php?id=' . $_GET['id'] . '\'"></i>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash" onclick="window.location=\'delete_film.inc.php?id=' . $_GET['id'] . '\'"></i>';
+                    if (isset($_SESSION["id"])) {
+                        echo '<i class="fa-solid fa-pen" onclick="window.location=\'edit_film.inc.php?id=' . $_GET['id'] . '\'"></i>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash" onclick="window.location=\'delete_film.inc.php?id=' . $_GET['id'] . '\'"></i>';
+                    } else {
+                        echo "<i class='fa-solid fa-pen' onclick='window.location=\"login.php\"'></i>&nbsp;&nbsp;&nbsp;<i class='fa-solid fa-trash' onclick='window.location=\"login.php\"'></i>";
+                    }
                 }
             } else if ($type == "series") {
                 while ($series = $result_series->fetch_assoc()) {
@@ -73,7 +77,11 @@
                     echo '<i class="fa-solid fa-thumbs-up" onclick="window.location=\'positive_series.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $series["ertekeles_pozitiv"] . ') ' . '<i class="fa-solid fa-thumbs-down" onclick="window.location=\'negative_series.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $series["ertekeles_negativ"] . ')';
                     echo '<br>';
                     echo '<br>';
-                    echo '<i class="fa-solid fa-pen" onclick="window.location=\'edit_series.inc.php?id=' . $_GET['id'] . '\'"></i>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash" onclick="window.location=\'delete_series.inc.php?id=' . $_GET['id'] . '\'"></i>';
+                    if (isset($_SESSION["id"])) {
+                        echo '<i class="fa-solid fa-pen" onclick="window.location=\'edit_series.inc.php?id=' . $_GET['id'] . '\'"></i>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash" onclick="window.location=\'delete_series.inc.php?id=' . $_GET['id'] . '\'"></i>';
+                    } else {
+                        echo "<i class='fa-solid fa-pen' onclick='window.location=\"login.php\"'></i>&nbsp;&nbsp;&nbsp;<i class='fa-solid fa-trash' onclick='window.location=\"login.php\"'></i>";
+                    }
                 }
             }
         ?>
