@@ -79,3 +79,16 @@
     margin-right: 10px;
     font-weight: 600;
 }
+
+#editButtons {
+    margin-left: 100px;
+}
+
+#edit_existing {
+    max-width: 30%;
+    margin-left: 35%;
+}
+
+#edit_existing_button {
+    margin-left: 40%;
+}

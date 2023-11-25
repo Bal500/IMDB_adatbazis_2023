@@ -77,7 +77,7 @@
                         <textarea name="film_desc" placeholder="Film leírása..." cols="50" rows="10" required></textarea>
                     </div>
 
-                    <button class="film_savebtn" type="submit" name="submit_film"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
+                    <button class="film_savebtn" type="submit" name="submit_film"><i class="fa-solid fa-floppy-disk"></i><span>&nbsp;Mentés</span></button>
                 </div>
             </form>
 
@@ -111,7 +111,7 @@
                         <textarea name="series_desc" placeholder="Sorozat leírása..." cols="50" rows="10" required></textarea>
                     </div>
 
-                    <button class="film_savebtn" type="submit" name="submit_series"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
+                    <button class="film_savebtn" type="submit" name="submit_series"><i class="fa-solid fa-floppy-disk"></i><span>&nbsp;Mentés</span></button>
                 </div>
             </form>
 
@@ -129,7 +129,7 @@
                         <input type="tetx" name="actor_nationality" placeholder="A színész állampolgársága..." required>
                     </div>
 
-                    <button class="film_savebtn" type="submit" name="submit_actor"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
+                    <button class="film_savebtn" type="submit" name="submit_actor"><i class="fa-solid fa-floppy-disk"></i><span>&nbsp;Mentés</span></button>
                 </div>
             </form>
         </fieldset>
