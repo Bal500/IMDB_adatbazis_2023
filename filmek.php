@@ -118,11 +118,13 @@
                                 Állampolgársága: 
                                 <br>" . $row["allampolgarsag"] . "
                                 </p>
-                                <span id='editButtons'>
-                                <i class='fa-solid fa-trash' onclick='window.location=\"delete_actor.inc.php?id=" . $row["id"] . "\"'></i>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <i class='fa-solid fa-pen' onclick='window.location=\"edit_actor.inc.php?id=" . $row["id"] . "\"'></i>
-                                </span>
+                                <span id='editButtons'>";
+                                if (isset($_SESSION["id"])) {
+                                    echo '<i class="fa-solid fa-pen" onclick="window.location=\'edit_actor.inc.php?id=' . $_GET['id'] . '\'"></i>   <i class="fa-solid fa-trash" onclick="window.location=\'edit_actor.inc.php?id=' . $_GET['id'] . '\'"></i>';
+                                } else {
+                                    echo "<i class='fa-solid fa-pen' onclick='window.location=\"login.php\"'></i>   <i class='fa-solid fa-trash' onclick='window.location=\"login.php\"'></i>";
+                                }
+                                echo "</span>
                             </div>
                         ";
                     }
