@@ -39,7 +39,7 @@
             require_once 'dbh.inc.php';
 
             if (isset($_SESSION["id"])) {
-                echo '<button id="addbtn" onclick="window.location.href=\'new_film.php\'"><i class="fa-solid fa-plus"></i></button>';
+                echo '<button id="addbtn" onclick="window.location.href=\'new_record.php\'"><i class="fa-solid fa-plus"></i></button>';
                 echo '<br>';
             } else {
                 echo "<span class='closed'>Új filmet adnál adatbázisunkhoz? <a href='login.php'>Jelentkezz be!</a></span>";

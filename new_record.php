@@ -43,6 +43,8 @@
                     <label for="typeof_film">Film</label>
                 <input type="radio" id="typeof_series" name="typeof" value="Sorozat" onclick="showHideFields()">
                     <label for="typeof_series">Sorozat</label>
+                <input type="radio" id="typeof_actor" name="typeof" value="Színész" onclick="showHideFields()">
+                    <label for="typeof_series">Színész</label>
             </div>
 
             <form method="post" action="new_film.inc.php">
@@ -84,6 +86,10 @@
                     <div class="input">
                         <input type="text" name="series_title" placeholder="Sorozat címe..." required>
                     </div>
+
+                    <div class="input">
+                        <input type="text" name="series_director" placeholder="A sorozat rendezője..." required>
+                    </div>
         
                     <div class="input">
                         <input type="number" name="series_season" placeholder="Évadok száma..." required>
@@ -106,6 +112,24 @@
                     </div>
 
                     <button class="film_savebtn" type="submit" name="submit_series"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
+                </div>
+            </form>
+
+            <form method="post" action="new_actor.inc.php">
+                <div id="actorFields" style="display: none;">
+                    <div class="input">
+                        <input type="text" name="actor_name" placeholder="A színész neve..." required>
+                    </div>
+        
+                    <div class="input">
+                        <input type="date" name="actor_dob" required>
+                    </div>
+        
+                    <div class="input">
+                        <input type="tetx" name="actor_nationality" placeholder="A színész állampolgársága..." required>
+                    </div>
+
+                    <button class="film_savebtn" type="submit" name="submit_actor"><i class="fa-solid fa-floppy-disk"></i><span>Mentés</span></button>
                 </div>
             </form>
         </fieldset>

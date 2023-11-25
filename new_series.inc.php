@@ -5,11 +5,10 @@
     error_reporting(E_ALL);
 
     require_once 'dbh.inc.php';
-    require_once 'functions.inc.php';
-
 
     if (isset($_POST['submit_series'])) {
         $cim = $_POST['series_title'];
+        $rendezo = $_POST['series_director'];
         $evadok = $_POST['series_season'];
         $reszek = $_POST['series_parts'];
         $leiras = $_POST['series_desc'];
@@ -17,10 +16,10 @@
         $mufaj = $_POST['series_type'];
         $ertekeles = 0;
     
-        $insert_series = "INSERT INTO sorozatok (cim, leiras, szineszek, mufaj, evadok, reszek, ertekeles)
-                        VALUES ('$cim', '$leiras', '$szineszek', '$mufaj', '$evadok', '$reszek', '$ertekeles')";
-
-        $conn->query($insert_series);
+        $insert_series = $conn->prepare("INSERT INTO sorozatok (cim, rendezo, leiras, szineszek, mufaj, evadok, reszek, ertekeles_pozitiv, ertekeles_negativ)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $insert_series->bind_param("sssssiisi", $cim, $rendezo, $leiras, $szineszek, $mufaj, $evadok, $reszek, $ertekeles, $ertekeles);
+        $insert_series->execute();
 
         $conn->close();
     

@@ -5,8 +5,6 @@
     error_reporting(E_ALL);
 
     require_once 'dbh.inc.php';
-    require_once 'functions.inc.php';
-
 
     if (isset($_POST['submit_film'])) {
         $cim = $_POST['film_title'];
@@ -18,10 +16,10 @@
         $megjelenes_eve = $_POST['film_publish'];
         $ertekeles = 0;
     
-        $insert_film = "INSERT INTO filmek (cim, rendezo, leiras, szineszek, jatekido, mufaj, megjelenes_eve, ertekeles)
-                        VALUES ('$cim', '$rendezo', '$leiras', '$szineszek', '$jatekido', '$mufaj', '$megjelenes_eve', '$ertekeles')";
-
-        $conn->query($insert_film);
+        $insert_film = $conn->prepare("INSERT INTO filmek (cim, rendezo, leiras, szineszek, jatekido, mufaj, megjelenes_eve, ertekeles_pozitiv, ertekeles_negativ)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $insert_film->bind_param("ssssisiii", $cim, $rendezo, $leiras, $szineszek, $jatekido, $mufaj, $megjelenes_eve, $ertekeles, $ertekeles);
+        $insert_film->execute();
 
         $conn->close();
     
