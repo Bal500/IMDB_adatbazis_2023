@@ -40,7 +40,9 @@
             $id_actualFilm = $_GET['id'];
             $_SESSION['id_actualFilm'] = $id_actualFilm;
             $getFilm = "SELECT * FROM filmek WHERE id = " . $id_actualFilm;
+            $getSeries = "SELECT * FROM sorozatok WHERE id = " . $id_actualFilm;
             $result_film = $conn->query($getFilm);
+            $result_series = $conn->query($getSeries);
 
             while ($film = $result_film->fetch_assoc()) {
                 echo '<br>';
@@ -52,10 +54,28 @@
                 echo '<br>';
                 echo '<p class="filmlength"> Hossz: <br>' . $film["jatekido"] . ' p </p>';
                 echo '<br>';
-                echo '<i class="fa-solid fa-thumbs-up" onclick="window.location=\'positive.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $film["ertekeles_pozitiv"] . ') ' . '<i class="fa-solid fa-thumbs-down" onclick="window.location=\'negative.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $film["ertekeles_negativ"] . ')';
+                echo '<i class="fa-solid fa-thumbs-up" onclick="window.location=\'positive_film.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $film["ertekeles_pozitiv"] . ') ' . '<i class="fa-solid fa-thumbs-down" onclick="window.location=\'negative_film.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $film["ertekeles_negativ"] . ')';
                 echo '<br>';
                 echo '<br>';
                 echo '<i class="fa-solid fa-pen"></i>';
+            }
+
+            if ($result_series === FALSE) {
+                echo "Error: " . $conn->error;
+            } else {
+                while ($series = $result_series->fetch_assoc()) {
+                    echo '<br>';
+                    echo '<span class="nev">'  . $series["rendezo"] . ': <br>' . $series["cim"] . ' (' . $series["evadok"] . ' évad, ' . $series["reszek"] . ' rész) <br> ('. $series["mufaj"] .') </span>';
+                    echo '<br> <br> <br>';
+                    echo '<p class="desc">' . $series["leiras"] . '</p>';
+                    echo '<br>';
+                    echo '<p class="desc">' . $series["szineszek"] . '</p>';
+                    echo '<br>';
+                    echo '<i class="fa-solid fa-thumbs-up" onclick="window.location=\'positive_series.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $series["ertekeles_pozitiv"] . ') ' . '<i class="fa-solid fa-thumbs-down" onclick="window.location=\'negative_series.inc.php?id=' . $_GET['id'] . '\'"></i> (' . $series["ertekeles_negativ"] . ')';
+                    echo '<br>';
+                    echo '<br>';
+                    echo '<i class="fa-solid fa-pen"></i>';
+                }
             }
         ?>
     </section>

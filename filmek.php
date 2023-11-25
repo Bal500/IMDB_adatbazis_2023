@@ -86,7 +86,7 @@
                         echo "
                             <div class='film'>
                                 <a href='detailform.inc.php?id=" . $row["id"] . "' class='details'>
-                                    <span class='nev'>" . $row["cim"] . "<br> (" . $row["reszek"] . ") rész</span>
+                                    <span class='nev'>" . $row["cim"] . "<br> (" . $row["reszek"] . " rész)</span>
                                     <br>
                                     <p class='desc'>" . $row["leiras"] . "</p>
                                     <br>
