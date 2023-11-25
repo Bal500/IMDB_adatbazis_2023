@@ -64,7 +64,7 @@
                     while($row = $result_film->fetch_assoc()) {
                         echo "
                             <div class='film'>
-                                <a href='detailform.inc.php?id=" . $row["id"] . "' class='details'>
+                                <a href='detailform.inc.php?id=" . $row["id"] . "&typeof=movie' class='details'>
                                     <span class='nev'>" . $row["rendezo"] . ": <br>" . $row["cim"] . "</span>
                                     <br>
                                     <p class='desc'>" . $row["leiras"] . "</p>
@@ -87,7 +87,7 @@
                     while($row = $result_series->fetch_assoc()) {
                         echo "
                             <div class='film'>
-                                <a href='detailform.inc.php?id=" . $row["id"] . "' class='details'>
+                                <a href='detailform.inc.php?id=" . $row["id"] . "&typeof=series' class='details'>
                                     <span class='nev'>" . $row["cim"] . "<br> (" . $row["reszek"] . " rész)</span>
                                     <br>
                                     <p class='desc'>" . $row["leiras"] . "</p>
