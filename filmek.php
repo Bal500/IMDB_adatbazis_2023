@@ -52,8 +52,10 @@
                 require_once 'dbh.inc.php';
                 $getFilm = "SELECT id, rendezo, cim, leiras, jatekido FROM filmek";
                 $getSeries = "SELECT id, cim, reszek, leiras, evadok FROM sorozatok";
+                $getActor = "SELECT * FROM szineszek";
                 $result_film = $conn->query($getFilm);
                 $result_series = $conn->query($getSeries);
+                $result_actor = $conn->query($getActor);
 
                 if ($result_film->num_rows > 0) {
                     echo '<br>';
@@ -95,6 +97,27 @@
                                     <br>" . $row["evadok"] . " évad
                                     </p>
                                 </a>
+                            </div>
+                        ";
+                    }
+                }
+
+                echo '<br>';
+
+                if ($result_actor->num_rows > 0) {
+                    echo '<br>';
+                    echo '<h3>Színészek</h3>';
+                    while($row = $result_actor->fetch_assoc()) {
+                        echo "
+                            <div class='nona-film'>
+                                <span class='nev'>" . $row["nev"] . "</span>
+                                <br>
+                                <p class='desc'>Született: <br>" . $row["szuletesi_datum"] . "</p>
+                                <br>
+                                <p class='filmlength'>
+                                Állampolgársága: 
+                                <br>" . $row["allampolgarsag"] . "
+                                </p>
                             </div>
                         ";
                     }

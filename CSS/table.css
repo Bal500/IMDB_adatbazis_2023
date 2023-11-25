@@ -21,18 +21,21 @@
     padding: 20px 0px;
 }
 
-#filmsection .films .film-con .film .details .nev {
+#filmsection .films .film-con .film .details .nev,
+#filmsection .films .film-con .nona-film .nev {
     padding: 0px 10px;
     font-size: x-large;
     font-weight: 600;
 }
 
-#filmsection .films .film-con .film .details p {
+#filmsection .films .film-con .film .details p,
+#filmsection .films .film-con .nona-film p {
     text-align: center;
     height: auto;
 }
 
-#filmsection .films .film-con .film .details {
+#filmsection .films .film-con .film .details,
+#filmsection .films .film-con .nona-film {
     cursor: pointer;
     margin: 2% 15% 5% 15%;
     position: relative;
@@ -61,7 +64,8 @@
     text-decoration: none;
 }
 
-#filmsection .films .film-con .film .details .desc {
+#filmsection .films .film-con .film .details .desc,
+#filmsection .films .film-con .nona-film .desc {
     padding: 10px;
     margin: 40px 70px;
     text-align: center;
@@ -69,7 +73,8 @@
     max-width: 40%;
 }
 
-#filmsection .films .film-con .film .details .filmlength {
+#filmsection .films .film-con .film .details .filmlength,
+#filmsection .films .film-con .nona-film .filmlength {
     margin-top: 40px;
     margin-right: 10px;
     font-weight: 600;
