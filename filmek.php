@@ -122,7 +122,7 @@
                                 if (isset($_SESSION["id"])) {
                                     echo '<i class="fa-solid fa-pen" onclick="window.location=\'edit_actor.inc.php?id=' . $_GET['id'] . '\'"></i>   <i class="fa-solid fa-trash" onclick="window.location=\'edit_actor.inc.php?id=' . $_GET['id'] . '\'"></i>';
                                 } else {
-                                    echo "<i class='fa-solid fa-pen' onclick='window.location=\"login.php\"'></i>   <i class='fa-solid fa-trash' onclick='window.location=\"login.php\"'></i>";
+                                    echo "<i class='fa-solid fa-pen' onclick='window.location=\"login.php\"'></i><i class='fa-solid fa-trash' onclick='window.location=\"login.php\"'></i>";
                                 }
                                 echo "</span>
                             </div>
