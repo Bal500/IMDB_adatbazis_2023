@@ -45,14 +45,15 @@
                 $id_edit = $_POST["id"];
                 $cim = $_POST['series_title'];
                 $rendezo = $_POST['series_director'];
+                $megjelenes_eve = $_POST['series_publish'];
                 $evadok = $_POST['series_season'];
                 $reszek = $_POST['series_parts'];
                 $leiras = $_POST['series_desc'];
                 $szineszek = $_POST['actors'];
                 $mufaj = $_POST['series_type'];
 
-                $updateSeries = $conn->prepare("UPDATE sorozatok SET cim = ?, rendezo = ?, evadok = ?, reszek = ?, leiras = ?, szineszek = ?, mufaj = ? WHERE id = ?");
-                $updateSeries->bind_param("sssssssi", $cim, $rendezo, $evadok, $reszek, $leiras, $szineszek, $mufaj, $id_edit);
+                $updateSeries = $conn->prepare("UPDATE sorozatok SET cim = ?, rendezo = ?, megjelenes_eve = ?, evadok = ?, reszek = ?, leiras = ?, szineszek = ?, mufaj = ? WHERE id = ?");
+                $updateSeries->bind_param("sssssssi", $cim, $rendezo, $megjelenes_eve, $evadok, $reszek, $leiras, $szineszek, $mufaj, $id_edit);
                 $updateSeries->execute();
 
                 header("location: filmek.php");
@@ -76,7 +77,11 @@
                                 <div class="input">
                                     <input type="text" name="series_director" placeholder="A sorozat rendezője..." required value="' . $row["rendezo"] . '">
                                 </div>
-                    
+
+                                <div class="input">
+                                    <input type="number" name="series_publish" placeholder="Első megjelenés éve..." required>
+                                </div>
+
                                 <div class="input">
                                     <input type="number" name="series_season" placeholder="Évadok száma..." required value="' . $row["evadok"] . '">
                                 </div>

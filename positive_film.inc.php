@@ -1,6 +1,6 @@
 <?php
     require_once 'dbh.inc.php';
-    require_once 'detailform.inc.php';
+    require_once 'detailform.php';
 
     $id = $_SESSION['id_actualFilm'];
 
@@ -8,7 +8,7 @@
 
     if (isset($_SESSION['id'])) {
         $conn->query($sql);
-        header("location: detailform.inc.php?id=" . $id);
+        header("location: detailform.php?id=" . $id . "&typeof=movie");
     } else {
         header('location: login.php');
     }

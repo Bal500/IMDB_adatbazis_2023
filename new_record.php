@@ -92,6 +92,10 @@
                     </div>
         
                     <div class="input">
+                        <input type="number" name="series_publish" placeholder="Első megjelenés éve..." required>
+                    </div>
+
+                    <div class="input">
                         <input type="number" name="series_season" placeholder="Évadok száma..." required>
                     </div>
         
