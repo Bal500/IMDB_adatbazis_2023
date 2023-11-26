@@ -132,7 +132,7 @@
 
                 echo '<br>';
 
-                echo '<h3>Lekérdezések</h3>';
+
                 $sql_1 = "
                     SELECT cim, ertekeles_pozitiv, ertekeles_negativ, megjelenes_eve
                     FROM sorozatok
@@ -140,24 +140,7 @@
                     ORDER BY ertekeles_pozitiv DESC
                     LIMIT 5;
                 ";
-
-                echo '<br> <br>';
-
-                echo '<h5>(Listázza ki táblázatos formában az 5 legnagyobb értékelést kapott sorozatot, amely a 2019-es év után került bemutatásra.)</h3>';
-                if ($result_1 = $conn->query($sql_1)) {
-                    $i = 1;
-                    while($row = $result_1->fetch_assoc()) { 
-                        echo "
-                            <div class='film'>
-                                <br>"
-                                . $i . ". " . $row["cim"] .
-                                "<br>
-                            </div>
-                        ";
-                        $i++;
-                    }
-                }
-
+                $result_sql_1 = $conn->query($sql_1);
 
                 $sql_2 = "
                     SELECT megjelenes_eve, COUNT(cim) AS filmek_szama
@@ -166,22 +149,42 @@
                     GROUP BY megjelenes_eve
                     ORDER BY megjelenes_eve DESC;
                 ";
+                $result_sql_2 = $conn->query($sql_2);
 
-                echo '<br> <br> <br>';
 
-                echo '<h5>(Listázza ki táblázatos formában a 2000-es évtől kezdődően évenként a megjelent filmek számát év szerint csökkenő sorrendben.)</h3>';
-                if ($result_2 = $conn->query($sql_2)) {
-                    while($row = $result_2->fetch_assoc()) { 
-                        echo "
-                            <div class='film'>
-                                <br>"
-                                . $row["megjelenes_eve"] . ": " . $row["filmek_szama"] . " film jelent meg" .
-                                "<br>
-                            </div>
-                        ";
+
+                if ($result_sql_1->num_rows > 0 || $result_sql_2->num_rows > 0) {
+                    echo '<h3>Lekérdezések</h3>';
+                    echo '<br> <br>';
+                    $i = 1;
+                    if ($result_sql_1->num_rows > 0) {
+                        echo '<h5>(Listázza ki táblázatos formában az 5 legnagyobb értékelést kapott sorozatot, amely a 2019-es év után került bemutatásra.)</h3>';
+                        while($row = $result_sql_1->fetch_assoc()) { 
+                            echo "
+                                <div class='film'>
+                                    <br>"
+                                    . $i . ". " . $row["cim"] .
+                                    "<br>
+                                </div>
+                            ";
+                            $i++;
+                        }
+                    }
+
+                    if ($result_sql_2->num_rows > 0) {
+                        echo '<br> <br> <br>';
+                        echo '<h5>(Listázza ki táblázatos formában a 2000-es évtől kezdődően évenként a megjelent filmek számát év szerint csökkenő sorrendben.)</h3>';
+                        while($row = $result_sql_2->fetch_assoc()) { 
+                            echo "
+                                <div class='film'>
+                                    <br>"
+                                    . $row["megjelenes_eve"] . ": " . $row["filmek_szama"] . " film jelent meg" .
+                                    "<br>
+                                </div>
+                            ";
+                        }
                     }
                 }
-
                 $conn->close();
             ?>
             </div>
