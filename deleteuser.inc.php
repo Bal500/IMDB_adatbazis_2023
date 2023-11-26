@@ -1,7 +1,7 @@
 <?php
     require_once 'dbh.inc.php';
 
-    $id_del = $_SESSION["id"];
+    $id_del = $_GET["id"];
 
     $query2 = "DELETE FROM personal WHERE userID=?";
     $query = "DELETE FROM users WHERE id=?";

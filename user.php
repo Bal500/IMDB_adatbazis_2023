@@ -50,7 +50,9 @@
             </div>
             
             <button onclick="window.location='logout.inc.php'" class="defaultbtn"><i class="fa-solid fa-right-from-bracket"></i><span>Kijelentkezés</span></button>
-            <button onclick="window.location='confirmation.inc.php'" id="delete_account"><i class="fa-solid fa-trash"></i><span>Fiók törlése</span></button>
+            <?php
+                echo "<button onclick=\"window.location='deleteuser.inc.php?id=".$_SESSION['id']."'\" id=\"delete_account\"><i class=\"fa-solid fa-trash\"></i><span>Fiók törlése</span></button>";
+            ?>
         </div>
     </div>
     
